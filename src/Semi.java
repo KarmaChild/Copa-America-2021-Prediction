@@ -20,7 +20,7 @@ public class Semi {
     }
     public Team winner(){
         Scanner scan = new Scanner(System.in);
-        int choice = io.readInt("Who wins between: "+semi.get(0).getName() +" VS " +semi.get(1).getName());
+        int choice = io.readInt("Who wins between: "+semi.get(0).getName() +" VS " +semi.get(1).getName(),"Semi Final");
 
         if (choice == 1) {
             return semi.get(0);

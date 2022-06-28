@@ -26,8 +26,8 @@ public class DialogIO extends AbstractDialogIO{
      * @return the int read
      */
     @Override
-    public int readInt(String prompt) {
-        String input = JOptionPane.showInputDialog(prompt);
+    public int readInt(String prompt, String round) {
+        String input = JOptionPane.showInputDialog(null,prompt,round,JOptionPane.QUESTION_MESSAGE);
         return Integer.parseInt(input);
     }
 
@@ -38,15 +38,10 @@ public class DialogIO extends AbstractDialogIO{
      */
     @Override
     public void outputString(String outString) {
-        JOptionPane.showMessageDialog(null,outString);
+        ImageIcon icon = new ImageIcon("src/leo.jpg");
+        JOptionPane.showMessageDialog(null,outString,null,JOptionPane.INFORMATION_MESSAGE,icon);
     }
 
     public static void main(String[] args){
-        DialogIO io = new DialogIO();
-        io.readString("Enter your name: ");
-        io.readInt("Enter your age: ");
-        String[] val = {"1","2","3"};
-        io.readChoice(val);
-        io.outputString("Thank you!");
     }
 }

@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.*;
 
@@ -6,6 +7,8 @@ public class copaSystem {
     private InputOutputInterface io = new DialogIO();
 
     public copaSystem(Table north, Table south){
+
+
         Quarter quarter1 = new Quarter();
         quarter1.addTeam1(north.getFirst());
         quarter1.addTeam2(south.getFourth());
@@ -52,8 +55,8 @@ public class copaSystem {
         Team peru = new Team("Peru");
         Team venezuela = new Team("Venezuela");
 
-        Table GroupB = new Table(argentina,chile,uruguay,paraguay,bolivia);
-        Table GroupA = new Table(brazil,colombia,ecuador,venezuela,peru);
+        Table GroupA = new Table(brazil,colombia,ecuador,venezuela,peru,"Group A");
+        Table GroupB = new Table(argentina,chile,uruguay,paraguay,bolivia,"Group B");
 
         copaSystem copa = new copaSystem(GroupA,GroupB);
     }

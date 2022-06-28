@@ -28,12 +28,13 @@ public abstract class AbstractDialogIO implements InputOutputInterface {
      * @param options an array with the options that are presented to the user
      * @return the int specifying the array index for the option selected by the user
      */
-    public int readChoice(String[] options) {
+    public int readChoice(String[] options, String prompt,String group) {
+        ImageIcon imageIcon = new ImageIcon("src/copa.png");
         String selection = (String) JOptionPane.showInputDialog(null, // parent component
-                "Please select an option ", // prompt
-                "Choice Selection", // window title
+                prompt, // prompt
+                group, // window title
                 JOptionPane.QUESTION_MESSAGE, // type of message
-                null, // icon displayed
+                imageIcon, // icon displayed
                 options, // choices for the Combo box
                 options[0]); // initial selection
         if (selection == null)
@@ -42,6 +43,6 @@ public abstract class AbstractDialogIO implements InputOutputInterface {
             if (selection.equals(options[i]))
                 return i+1;
         JOptionPane.showMessageDialog(null, "Illegal choice: " + selection + "\n");
-        return readChoice(options);
+        return readChoice(options,prompt,group);
     }
 }

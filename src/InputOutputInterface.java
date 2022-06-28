@@ -32,7 +32,7 @@ public interface InputOutputInterface {
      * @param prompt the string to be displayed as a prompt
      * @return the int read
      */
-    int readInt(String prompt);
+    int readInt(String prompt, String round);
 
     /**
      * Display the list of options and read an int that is the index of one of the options. The
@@ -41,7 +41,7 @@ public interface InputOutputInterface {
      * @param options an array with the options that are presented to the user
      * @return the int specifying the array index for the option selected by the user
      */
-    int readChoice(String[] options);
+    int readChoice(String[] options, String prompt,String group);
 
     /**
      * Output the String parameter.

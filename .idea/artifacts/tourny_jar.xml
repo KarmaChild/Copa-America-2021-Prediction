@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="tourny:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/tourny_jar</output-path>
+    <root id="archive" name="tourny.jar">
+      <element id="module-output" name="tourny" />
+    </root>
+  </artifact>
+</component>

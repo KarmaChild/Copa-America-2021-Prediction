@@ -20,7 +20,7 @@ public class Quarter {
     }
 
     public Team winner(){
-        int choice = io.readInt("Who wins between: "+quarter.get(0).getName() +" VS " +quarter.get(1).getName());
+        int choice = io.readInt("Who wins between: "+quarter.get(0).getName() +" VS " +quarter.get(1).getName(),"Quarter Final");
 
         if (choice == 1) {
             return quarter.get(0);

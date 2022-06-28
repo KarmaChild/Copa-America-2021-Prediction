@@ -21,7 +21,7 @@ public class Final {
     
     public Team winner(){
         Scanner scan = new Scanner(System.in);
-        int choice = io.readInt("Who wins between: "+Final.get(0).getName() +" VS " +Final.get(1).getName());
+        int choice = io.readInt("Who wins between: "+Final.get(0).getName() +" VS " +Final.get(1).getName(),"Final");
 
         if (choice == 1) {
             return Final.get(0);
